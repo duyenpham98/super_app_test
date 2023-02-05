@@ -1,0 +1,41 @@
+{
+    "name": "Test01",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "android": "react-native run-android",
+        "ios": "react-native run-ios",
+        "start": "react-native start",
+        "test": "jest",
+        "lint": "eslint .",
+        "clean": "cd android && ./gradlew clean",
+        "bundle-zip": "rm -rf build && yarn create-build-folder && yarn bundle && yarn zip",
+        "bundle-all": "rm -rf build && yarn create-build-folder && yarn bundle",
+        "bundle": "yarn bundle-android && yarn bundle-ios",
+        "bundle-ios": "react-native bundle --platform ios --dev false --entry-file index.js --bundle-output build/ios/main.jsbundle --assets-dest build/ios/",
+        "bundle-android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output build/android/main.jsbundle --assets-dest build/android/",
+        "zip": "yarn zip-android && yarn zip-ios",
+        "zip-android": "zip -r ./build/zip/android.zip ./build/android",
+        "zip-ios": "zip -r ./build/zip/ios.zip ./build/ios",
+        "create-build-folder": "mkdir -p build/android && mkdir -p build/ios && mkdir -p build/zip",
+        "codepush-android-staging": "appcenter codepush release-react -a Demo-MiniAppView/Test-01-Android -b main.jsbundle -d Staging"
+    },
+    "dependencies": {
+        "react": "16.13.1",
+        "react-native": "0.63.4",
+        "react-native-code-push": "^7.0.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.13.10",
+        "@babel/runtime": "^7.13.10",
+        "@react-native-community/eslint-config": "^2.0.0",
+        "babel-jest": "^26.6.3",
+        "eslint": "^7.22.0",
+        "jest": "^26.6.3",
+        "metro-react-native-babel-preset": "^0.65.2",
+        "react-test-renderer": "17.0.1"
+    },
+    "jest": {
+        "preset": "react-native"
+    }
+}

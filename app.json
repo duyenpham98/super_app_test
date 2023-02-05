@@ -1,0 +1,16 @@
+{
+  "name": "Super66",
+  "displayName": "Super66",
+  "miniApps": {
+    "TestTemplateMini": {
+      "packageName": "TestTemplateMini_Module",
+      "mainComponentName": "MyAppMini",
+      "deployments": {
+        "DEV": {
+          "android": "kdfghjkdfghjkdfg",
+          "ios": "dlkfhkdhgkjdfghjkdfg"
+        }
+      }
+    }
+  }
+}

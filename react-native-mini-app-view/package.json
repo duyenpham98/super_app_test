@@ -1,0 +1,45 @@
+{
+    "name": "react-native-mini-app-view",
+    "title": "React Native Mini App View",
+    "version": "1.0.0",
+    "description": "TODO",
+    "main": "index.js",
+    "files": [
+        "README.md",
+        "android",
+        "index.js",
+        "src",
+        "ios",
+        "react-native-mini-app-view.podspec"
+    ],
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+http://gitlab.banvien.com.vn/SNP/mobile-apps/react-native-mini-app-view.git",
+        "baseUrl": "http://gitlab.banvien.com.vn/SNP/mobile-apps/react-native-mini-app-view"
+    },
+    "keywords": [
+        "react-native",
+        "react-native-mini-app-view"
+    ],
+    "author": {
+        "name": "Dinh Hong Ngoc",
+        "email": "dinhhongngoc383@gmail.com"
+    },
+    "license": "MIT",
+    "licenseFilename": "LICENSE",
+    "readmeFilename": "README.md",
+    "peerDependencies": {
+        "react": "^16.8.1",
+        "react-native": "0.66.0",
+        "react-native-code-push": "^7.0.0",
+        "react-native-fs": "^2.16.6",
+        "react-native-zip-archive": "^6.0.2"
+    },
+    "devDependencies": {
+        "react": "^16.9.0",
+        "react-native": "0.66.0"
+    }
+}

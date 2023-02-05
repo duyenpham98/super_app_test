@@ -1,0 +1,48 @@
+{
+    "name": "example",
+    "displayName": "example",
+    "miniApps": {
+        "Test01": {
+            "packageName": "Test01_Module",
+            "mainComponentName": "Test01",
+            "deployments": {
+                "staging": {
+                    "android": "uO1_CJxa3rXy_veOwt7LDx2xjjgqtOXZV6uK6",
+                    "ios": "bbZbtIZwjCCDd0Ym_egJTz6DmuC3RMzKr1dbb"
+                },
+                "production": {
+                    "android": "H-fXucAtNfH9dq4HWX6p-SjsCqy-03IY0DDvZ",
+                    "ios": ""
+                }
+            }
+        },
+        "Test02": {
+            "packageName": "Test02_Module",
+            "mainComponentName": "Test02",
+            "deployments": {
+                "staging": {
+                    "android": "uO1_CJxa3rXy_veOwt7LDx2xjjgqtOXZV6uK6-FAILURE",
+                    "ios": ""
+                },
+                "production": {
+                    "android": "H-fXucAtNfH9dq4HWX6p-SjsCqy-03IY0DDvZ",
+                    "ios": ""
+                }
+            }
+        },
+        "Ma01": {
+            "packageName": "Ma01_Module",
+            "mainComponentName": "ma_01",
+            "deployments": {
+                "staging": {
+                    "android": "",
+                    "ios": ""
+                },
+                "production": {
+                    "android": "",
+                    "ios": ""
+                }
+            }
+        }
+    }
+}
