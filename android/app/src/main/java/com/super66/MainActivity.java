@@ -1,7 +1,9 @@
 package com.super66;
 
 import com.facebook.react.ReactActivity;
-
+import com.facebook.react.ReactPackage;
+import com.reactlibrary.SuperReactActivity;
+import java.util.List;
 public class MainActivity extends ReactActivity {
 
   /**
@@ -12,4 +14,9 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "Super66";
   }
+
+   @Override
+    protected List<ReactPackage> getPackages() {
+        return ((MainApplication) this.getApplication()).getPackageList();
+    }
 }

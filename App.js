@@ -7,20 +7,10 @@ import {miniApps} from './app.json';
 const {TestTemplateMini} = miniApps;
 const {packageName, mainComponentName} = TestTemplateMini;
 
-interface Props {
-  navigation: any;
-  route: any;
-}
+class App extends Component {
+  _miniAppViewRef = null;
 
-interface State {
-  isLoading: boolean;
-  isOpenMini: boolean;
-}
-
-class App extends Component<Props, State> {
-  _miniAppViewRef: MiniAppView | null = null;
-
-  constructor(props: Props) {
+  constructor(props) {
     super(props);
     this.state = {
       isLoading: true,
@@ -37,7 +27,7 @@ class App extends Component<Props, State> {
     );
   };
 
-  getJSBundlePath(name: string) {
+  getJSBundlePath(name) {
     return `${RNFS.DocumentDirectoryPath}/${name}/CodePush/main`;
   }
 
@@ -48,7 +38,7 @@ class App extends Component<Props, State> {
         {isLoading && this.renderLoading()}
 
         <MiniAppView
-          ref={(ref: MiniAppView | null) => (this._miniAppViewRef = ref)}
+          ref={ref => (this._miniAppViewRef = ref)}
           style={{flex: 1}}
           onReadyToLoadApp={() => {
             console.log(
@@ -71,7 +61,7 @@ class App extends Component<Props, State> {
               Alert.alert('loaded');
             })
           }
-          onNavigate={(name: string) => this.props.navigation.navigate(name)}
+          onNavigate={name => this.props.navigation.navigate(name)}
         />
       </View>
     );
